@@ -28,6 +28,7 @@ namespace Travel_agency_project
             InitializeComponent();
         }
 
+        // Regiszrtáció
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
 
@@ -48,6 +49,7 @@ namespace Travel_agency_project
             }
         }
 
+        // Bejelentkezés
         private async void LoginB_Click(object sender, RoutedEventArgs e)
         {
 

@@ -17,7 +17,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-
+        <!-- Fejléc -->
         <Border Grid.Row="0" Grid.ColumnSpan="2" Background="#2A2A2D">
             <Grid Name="TopSideG">
                 <TextBlock Text="Experience" FontSize="40" VerticalAlignment="Center" Margin="50,0,0,0" Foreground="LightCyan"/>
@@ -29,7 +29,7 @@
             </Grid>
         </Border>
 
-
+        <!-- Navigáció -->
         <Border Grid.Column="0" Grid.Row="1" Background="#2A2A2D">
             <StackPanel Name="LeftSide">
                 <Button Name="UpdateB" Content="Update Trip" Click="ShowUpdate" FontSize="24" Margin="20,30,20,0"/>
@@ -38,10 +38,13 @@
             </StackPanel>
         </Border>
 
+        <!-- Fő tartalom -->
         <Border Grid.Column="1" Grid.Row="1" Background="White">
             <Grid Name="ContentG">
                 <!--minden megjelenítendő dolog-->
 
+
+                <!-- Profil gomb -->
                 <Button Name="btnGetProfile" Background="Black" Width="70" Height="70" Margin="0,50,50,0" FontSize="40" BorderThickness="0" Content="👤" Foreground="White" VerticalAlignment="Top"
                         HorizontalAlignment="Right" Click="btnGetProfile_Click">
 
@@ -54,6 +57,7 @@
 
                 </Button>
 
+                <!-- Profil információk -->
                 <StackPanel Name="AccountDetailsSP" Orientation="Vertical" HorizontalAlignment="Left" Margin="40,40,0,0">
                     <TextBlock Text="Profile Details" FontSize="40"/>
                     <TextBlock Text="__________________________________________" FontSize="40"/>
@@ -62,6 +66,7 @@
                 </StackPanel>
 
 
+                <!-- Utazás módosítása -->
                 <StackPanel Name="UpdateTripSP" Orientation="Vertical" HorizontalAlignment="Left" Margin="40,40,0,0">
                     <TextBlock Text="Update Trip" FontSize="40"/>
                     <TextBlock Text="__________________________________________" FontSize="40"/>
@@ -78,6 +83,7 @@
                     <Button Name="updateTripB" Content="Update" Click="UpdateTrip" FontSize="24" Margin="20,30,20,0" Width="200"/>
                 </StackPanel>
 
+                <!-- Utazás törlése -->
                 <StackPanel Name="DeleteTripSP" Orientation="Vertical" HorizontalAlignment="Left" Margin="40,40,0,0">
                     <TextBlock Text="Delete Trip" FontSize="40"/>
                     <TextBlock Text="__________________________________________" FontSize="40"/>
@@ -86,6 +92,7 @@
                     <Button Name="deleteTripB" Content="Delete" Click="DeleteTrip" FontSize="24" Margin="20,30,20,0" Width="200"/>
                 </StackPanel>
 
+                <!-- Utazás keresése név alapján -->
                 <StackPanel Name="SearchTripSP" Orientation="Vertical" HorizontalAlignment="Left" Margin="40,40,0,0">
                     <TextBlock Text="Search Trip" FontSize="40"/>
                     <TextBlock Text="__________________________________________" FontSize="40"/>

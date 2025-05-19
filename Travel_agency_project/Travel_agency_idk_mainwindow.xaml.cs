@@ -32,6 +32,7 @@ namespace Travel_agency_project
             HideEverithing();
         }
 
+        // Profil megtekintése
         private async void btnGetProfile_Click(object sender, RoutedEventArgs e)
         {
             string adat = await sc.GetProfileDataAsync(tokenSaver);
@@ -67,7 +68,7 @@ namespace Travel_agency_project
 
         }
 
-
+        // Profil megjelenítése
         void ShowProfile()
         {
             AccountDetailsSP.Visibility = Visibility.Visible;
@@ -83,24 +84,28 @@ namespace Travel_agency_project
             SearchTripSP.Visibility = Visibility.Hidden;
         }
 
+        // Utazás módosításának megjelenítése
         void ShowUpdate(object s, RoutedEventArgs e)
         {
             HideEverithing();
             UpdateTripSP.Visibility = Visibility.Visible;
         }
 
+        // Utazás törlésének megjelenítése
         void ShowDelete(object s, RoutedEventArgs e)
         {
             HideEverithing();
             DeleteTripSP.Visibility = Visibility.Visible;
         }
 
+        // Utazás keresésének megjelenítése
         void ShowSearch(object s, RoutedEventArgs e)
         {
             HideEverithing();
             SearchTripSP.Visibility = Visibility.Visible;
         }
 
+        // Utazás módosítása
         async void UpdateTrip(object s, RoutedEventArgs e)
         {
             if (await sc.UpdateTrip(Convert.ToInt32(updateIdTB.Text), updateNameTB.Text, updateDestinationTB.Text, updateAccommodationTB.Text, updateTransportTB.Text))
@@ -113,6 +118,7 @@ namespace Travel_agency_project
             }
         }
 
+        // Utazás törlése
         async void DeleteTrip(object s, RoutedEventArgs e)
         {
             if (await sc.DeleteTrip(Convert.ToInt32(deleteIdTB.Text)))
@@ -125,6 +131,7 @@ namespace Travel_agency_project
             }
         }
 
+        // Utazás keresése név alapján
         async void SearchTrip(object s, RoutedEventArgs e)
         {
             if ((await sc.SearchName(searchNameTB.Text)) != null)

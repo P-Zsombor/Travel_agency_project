@@ -14,7 +14,7 @@ namespace Travel_agency_project
     {
         public static HttpClient client = new HttpClient();
 
-
+        // Regisztráció
         public async Task<bool> Registration(string username, string password)
         {
             if (username.Length == 0 && password.Length == 0)
@@ -72,7 +72,7 @@ namespace Travel_agency_project
             }
         }
 
-
+        // Bejelentkezés
         public async Task<string> LoginAsync(string username, string password)
         {
             try
@@ -104,7 +104,7 @@ namespace Travel_agency_project
           
         }
 
-
+        // Profil megtekintése
         public async Task<string> GetProfileDataAsync(string token)
         {
             try
@@ -132,7 +132,7 @@ namespace Travel_agency_project
         }
 
 
-
+        // Utazás módosítása
         public async Task<bool> UpdateTrip(int id, string name, string destination, string accommodation, string transport)
         {
             try
@@ -160,6 +160,7 @@ namespace Travel_agency_project
             }
         }
 
+        // Utazás törlése
         public async Task<bool> DeleteTrip(int id)
         {
             try
@@ -177,6 +178,7 @@ namespace Travel_agency_project
             }
         }
 
+        // Utazás keresése név alapján
         public async Task<string> SearchName(string name)
         {
             try
